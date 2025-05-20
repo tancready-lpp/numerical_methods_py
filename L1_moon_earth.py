@@ -12,11 +12,10 @@ def f(r):
 
 def der_f(x):
         h = 1e-6
-        return (f(x+h)-f(x))/h
+        return (f(x+h/2)-f(x-h/2))/h
     
 def newton(r0, r):
-    tol = 1e-9
-    R = 3.844e10 # Earth-Moon distance in cm
+    tol = 1e-6
     while abs(r-r0)>tol:
         r = r0 - f(r0)/der_f(r0)
         r0 = r
@@ -41,5 +40,5 @@ def bisection(x1, x2):
     return x 
 
 
-print(f"{newton(9e9,6e9)/1e5:.2f} km") # Very sensitive to r0,r
+print(f"{newton(8e9,7e9)/1e5:.2f} km") # Very sensitive to r0,r and h
 print(f"{bisection(1e8,1e2)/1e5:.2f} km") # res = 35km: there's something wrong!

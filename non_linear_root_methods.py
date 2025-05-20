@@ -7,7 +7,7 @@ def f(x):
 
 def der_f(x):
     h = 1e-6
-    return (f(x+h) - f(x))/h
+    return (f(x+h/2) - f(x-h/2))/h
 
 # RELAXATION METHOD
 def relaxation(Eold,E,e,F):  
