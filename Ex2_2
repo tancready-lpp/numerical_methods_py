@@ -1,0 +1,10 @@
+"""
+A satellite is to be launched into a circular orbit around the Earth
+so that it orbits the planet once every T seconds.
+
+Show that the altitude h above the Earth’s surface that the satellite must have is 
+
+h =(GMT^2/4π^2)^1/3 -R
+
+where G = 6.67 × 10−11 m3 kg−1 s−2 is Newton’s gravitational constant,
+M = 5.97 ×10^24 kg is the mass of the Earth, and R = 6371 km is its radius. """
